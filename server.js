@@ -6,6 +6,7 @@ const dotenv = require('dotenv')
 const mysql = require('mysql');
 const hbs = require('express-handlebars')
 const bodyParser = require('body-parser')
+const ip = '0.0.0.0';
 //body parser
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -19,7 +20,7 @@ app.set('view engine', 'hbs');
 
 // PORT 8080
 const port = process.env.PORT || 3000;
-app.listen(port)
+app.listen(port,ip)
 
 //Routes
 const routes = require('./routes/routes')
