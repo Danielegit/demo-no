@@ -1,31 +1,16 @@
 <div class="container-fluid">
 	<h1>{{title}}</h1>
 	<div class="d-flex justify-content-around row">
-		
+		{{#each goods}}
 	        <div class=" col-4 p-3">
 	        	<div class="shadow">
-	        		<h3 class="bg-dark text-light ">{{this.name}}</h3>
+	        		<h3 class="bg-success text-light ">{{this.name}}</h3>
 	        		<p>Price: {{this.price}}€</p>
 	        	</div>
 	
 	    	</div>
-		
+		{{/each}}
 	</div>
-	<div>
-		{{!-- {{#if new}}
-         <p>new good has been created</p>
-       {{/if}} --}}
-		
-	</div>
-	{{!-- <div>
-		<form action="/goods" method="post" accept-charset="utf-8" class="shadow
-		p-3">
-		   <input type="hidden" name="status" value="true">
-		   <p>Name:</p>
-		   <input type="text" name="good[name]">
-		   <p>Price:</p>
-		   <input type="number" name="good[price]" value=""  step="0.01" >
-		   <button type="submit" class="btn btn-dark text-light">Submit</button>
-		</form>
-	</div> --}}
+
+
 </div>
