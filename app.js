@@ -18,7 +18,7 @@ app.engine('hbs', hbs({extname: 'hbs', defaultLayout: 'layout', layoutsDir: __di
 app.set('view engine', 'hbs');
 
 // PORT 8080
-const port = process.env.PORT ;
+const port = process.env.PORT || 3000;
 app.listen(port)
 
 //Routes
